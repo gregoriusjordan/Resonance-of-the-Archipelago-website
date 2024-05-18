@@ -1,0 +1,21 @@
+
+
+.button {
+    height: 35px;
+    width: 70px;
+
+}
+
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar stays on top of other content */
+  }
+  
+
+.logos {
+    font-size: 22px;
+}
+

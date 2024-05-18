@@ -1,0 +1,40 @@
+
+ {
+    width: 450px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .slick-slide img {
+    display: block;
+    margin: 0 auto;
+  }
+
+ 
+.slick-dots li button:before {
+  color: #F4ECD8;
+}
+
+
+.slick-prev, .slick-next {
+  top: 50%;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 80px;
+}
+
+.slick-next {
+  right: 80px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 35px;
+  color: ivory;
+}
+
+  
