@@ -45,7 +45,6 @@ const ResonanceList = () => {
 
   return (
     <div className="container-lg md:mx-auto bg-burgundys scrollbar scrollbar-thumb-taupe scrollbar-track-burgundy">
-      <Navbar />
       <br/><br/><br/><br/>
       <div className="flex justify-center flex-col" data-aos="fade-up" data-aos-offset="50">
         <h1 className="mt-10 lg:text-[90px] text-[60px] font-raja text-center text-ivory drop-shadow-md">Resonance</h1>

@@ -72,8 +72,8 @@ const laguDaerah = [
     {
         id: 11,
         nama: "Suwe Ora Jamu",
-        asal: "DIY Yogyakarta",
-        lirik: "Suwé ora jamu Jamu godhong téla, Suwé ora ketemu Ketemu pisan gawé gela.",
+        asal: "DI Yogyakarta",
+        lirik: "Suwe ora jamu Jamu godhong tela, Suwe ora ketemu Ketemu pisan gawe gela.",
         sejarah: "Suwe Ora Jamu adalah judul salah satu lagu daerah Jawa. Sejumlah sumber menyebut lagu ini diciptakan R C Hardjosoebroto, seniman bidang seni karawitan dan tembang dari Kulon Progo, Daerah Istimewa Yogyakarta, pada era 1970-an. Berikut lirik lagu Suwe Ora Jamu, lengkap dengan maknanya. Dikutip dari jurnal Mengembangkan Kreativitas Kekaryaan Tari bagi Siswa SMA karya Wahyudiarto dkk (Abdi Seni Vol 6 No 2, 2015), lagu Suwe Ora Jamu diciptakan oleh R C Hardjosoebroto.",
     },
     {
@@ -115,14 +115,14 @@ const laguDaerah = [
         id: 17,
         nama: "Yamko Rambe Yamko",
         asal: "Papua",
-        lirik: "Hee Yamko Rambe Yamko Aronawa kombe Hee Yamko Rambe Yamko Aronawa Kombe Temino Kibe Kubano Ko Bombe Ko Yuma No Bungo Awe Ade Temino Kibe Kubano Ko Bombe Ko Yuma No Bungo Awe Ade Hongke Hongke, Hongke Riro Hongke Jombe, Jombe Riro Hongke Hongke, Hongke Riro Hongke Jombe, Jombe Riro",
+        lirik: "Hee yamko rambe yamko Aronawa kombe Hee yamko rambe yamko Aronawa kombe Temino kibe kubano ko bombe ko Yuma no bungo awe ade Temino kibe kubano ko bombe ko Yuma no bungo awe ade Hongke hongke, hongke riro Hongke jombe, Jombe riro Hongke hongke, hongke riro Hongke jombe, jombe riro",
         sejarah: "Lagu Yamko Rambe Yamko memiliki makna tersirat. Yamko Rambe Yamko mengandung makna yang sangat mendalam dan memiliki nilai-nilai moral di dalamnya. Walaupun lagu Yamko Rambe Yamko memiliki tempo yang cepat dan terkesan riang, lagu ini memiliki kisah yang cukup kelam. Lagu ini mengisahkan tentang pertikaian yang sedang terjadi di dalam negeri. Lagu ini diceritakan dalam sudut padat sang pelantun yang ingin menjadi seorang bunga bangsa. Bunga bangsa di sini, memiliki arti sebagai pahlawan. Sang pelantun ingin menjadi pahlawan yang siap berkorban sampai mati demi mempertahankan negara Indonesia dari serangan penjajah sebelum Indonesia merdeka pada tahun 1945.",
     },
     {
         id: 18,
         nama: "Ratu Anom",
         asal: "Bali",
-        lirik: "Ratu anom metangi meilen-ilen Ratu anom metangi meilen-ilen Dong pirengang munyin sulinge di jaba Dong pirengang munyin sulinge di jaba Enyen ento menyuling di jaba tengah Enyen ento menyuling di jaba tengah Gusti Ngurah Alit Jambe Pemecutan Gusti Ngurah Alit Jambe Pemecutan",
+        lirik: "Ratu anom metangi meilen-ilen Ratu anom metangi meilen-ilen Dong pirengang munyin sulinge di jaba Dong pirengang munyin sulinge di jaba Enyen ento menyuling di jaba tengah Enyen ento menyuling di jaba tengah Gusti ngurah alit jambe pemecutan Gusti ngurah alit jambe pemecutan",
         sejarah: "Lagu ini akrab didendangkan dalam keseharian warga Bali yang cinta pada budaya. Bentuk liriknya semacam geguritan atau kidung yang bisa juga disebut sebagai pupuh. Menggunakan bahasa Jawa Kuno atau Bahasa Bali yang sudah jarang dipakai sehari-hari dalam percakapan biasa, namun mengandung pesan moral yang baik. Arti secara umum dari lagu Ratu Anom (kaum muda) adalah agar pemuda segera bangun dan mulai sadar untuk berbuat hal yang bermanfaat kepada tanah air dan negara.",
     },
 ]

@@ -6,8 +6,8 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="bg-burgundy lg:h-[240px] h-[240px] w-full p-8">
-      <div className="flex flex-row">
+    <div className="bg-burgundy lg:h-[240px] h-[280px] w-full lg:p-8 p-6">
+      <div className="flex lg:flex-row flex-col">
         <div className="flex flex-col lg:ms-4">
           <h1 className="text-ivory font-inter lg:text-xl text-sm text-left font-bold">
             Resonance of The Archipelago
@@ -16,8 +16,8 @@ const Footer = () => {
             © Ketloverz 2024. Made with 🩵 by Ketloverz.
           </h1>
         </div>
-        <div className="flex flex-col lg:ms-40 ms-8">
-          <h1 className="text-ivory font-inter lg:text-xl text-sm font-bold text-left lg:mb-6 mb-2 max-sm:ms-8">
+        <div className="flex flex-col lg:ms-40 max-sm:mt-4">
+          <h1 className="text-ivory font-inter lg:text-xl text-sm font-bold text-left lg:mb-6 mb-2">
             Contacts
           </h1>
           <div className="flex justify-start max-sm:mb-2">
@@ -74,7 +74,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col lg:ms-40 ms-8">
+        <div className="flex flex-col lg:ms-40 max-sm:mt-4">
           <h1 className="text-ivory font-inter lg:text-xl text-sm font-bold text-left lg:mb-6 mb-2">
             Address
           </h1>

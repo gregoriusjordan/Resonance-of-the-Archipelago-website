@@ -27,6 +27,8 @@ const Melody = () => {
       setIsFetching(false);
     }, 500);
 
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
     return () => {
       AOS.refresh();
     };
@@ -34,12 +36,11 @@ const Melody = () => {
 
   const handleClick = (index) => {
     navigate(`/melody/detail/${index}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    
   };
 
   return (
     <div className="container-lg md:mx-auto bg-burgundys scrollbar scrollbar-thumb-taupe scrollbar-track-burgundy">
-      <Navbar />
       <br/><br/><br/><br/>
       <div className="flex justify-center flex-col bg-burgundys" data-aos="fade-up" data-aos-offset="50">
         <h1 className="font-ivory mt-10 lg:text-[90px] text-[75px] font-raja text-center text-ivory drop-shadow-md">Melody</h1>

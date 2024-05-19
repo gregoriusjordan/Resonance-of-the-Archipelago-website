@@ -1,5 +1,6 @@
 import React from 'react';
 import AOS from 'aos';
+import "./AlatMusik.css";
 
 const AlatMusik = ({nama, asal, image }) => {
   AOS.init({
@@ -25,7 +26,7 @@ const AlatMusik = ({nama, asal, image }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="lg:rounded-[43px] rounded-[30px] bg-reso border-ivory border-[5px] flex flex-col items-center justify-center lg:w-[320px] lg:h-[380px] w-[220px] h-[280px] mb-10 drop-shadow-md tracking-wide" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50">
+      <div className="lg:rounded-[43px] rounded-[30px] resonance border-ivory border-[5px] flex flex-col items-center justify-center lg:w-[320px] lg:h-[380px] w-[220px] h-[280px] mb-10 drop-shadow-md tracking-wide" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="50">
         <img
           src={image}
           alt={nama}

@@ -48,7 +48,7 @@ const AlatMusikDetails = ({ alatMusik, currentIndex, alatMusikArray }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="flex bg-ivory lg:rounded-[60px] rounded-[30px] lg:w-[1150px] lg:h-[750px] w-[650px] h-[850px] drop-shadow-xl flex-col">
+      <div className="flex bg-ivory lg:rounded-[60px] rounded-[30px] lg:w-[1150px] lg:h-[750px] w-[650px] drop-shadow-xl flex-col">
         <div className="flex flex-row justify-between">
           <div className="lg:ms-10 ms-6 lg:mt-4">
             <button
@@ -114,7 +114,7 @@ const AlatMusikDetails = ({ alatMusik, currentIndex, alatMusikArray }) => {
                 {alatMusik.name}
               </h1>
             </div>
-            <p className="font-bhadra text-justify lg:text-[20px] text-[17px] text-burgundy lg:leading-10 lg:tracking-wide indent-12">
+            <p className="font-bhadra text-justify lg:text-[20px] text-[15px] text-burgundy lg:leading-10 lg:tracking-wide indent-12 mb-4">
               {alatMusik.description}
             </p>
           </div>

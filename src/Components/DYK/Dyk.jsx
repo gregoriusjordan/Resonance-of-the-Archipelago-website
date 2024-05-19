@@ -9,7 +9,7 @@ const DoYouKnow = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api");
+        const response = await axios.get("https://api.codespade.com:4517/codespade/api/bahasa-daerah");
         setData(response.data);
       } catch (error) {
         setError(error);

@@ -1,44 +1,36 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "../../Assets/Logo ROTA.png";
-import SignIn from "../../Pages/SignIn";
-import "./Navbar.css";
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import logo from '../../Assets/Logo ROTA.png';
+import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ isSignedIn, username, handleLogout, setPrevLocation }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
-  const [isSignedIn, setIsSignedIn] = useState(false);
-  const [username, setUsername] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const handleSignIn = (name) => {
-    setUsername(name);
-    setIsSignedIn(true);
-    setShowSignIn(false);
+  const handleSignInClick = () => {
+    setPrevLocation(location.pathname);
   };
 
-  const handleLogout = () => {
-    setIsSignedIn(false);
-    setUsername("");
-    setShowSignIn(false);
-  };
+  useEffect(() => {
+    setShowDropdown(false);
+  }, [isSignedIn]);
 
   return (
     <div className="navbar-container drop-shadow-xl">
       <nav className="navbar bg-ivory">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link
-            to="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <img src={logo} className="logo lg:w-[75px] md:w-[60px] w-[50px] " alt="Logo" />
-            <span className="self-center lg:text-2xl md:text-xl text-lg font-raja whitespace-wrap text-burgundy">
-              Resonance of the Archipelago
-            </span>
+          <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src={logo} className="logo lg:w-[75px] md:w-[60px] w-[50px]" alt="Logo" />
+            <div className="flex flex-wrap">
+              <span className="self-center lg:text-2xl md:text-xl text-lg font-raja text-burgundy">
+                Resonance of the Archipelago
+              </span>
+            </div>
           </Link>
           <button
             onClick={toggleMenu}
@@ -65,71 +57,53 @@ const Navbar = () => {
             </svg>
           </button>
           <div
-            className={`${
-              menuOpen ? "block" : "hidden"
-            } w-full md:block md:w-auto mt-6 me-[-30px]`}
+            className={`${menuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto lg:mt-6 me-[-30px]`}
             id="navbar-multi-level"
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
               <li>
-                <Link
-                  to="/"
-                  className="block text-md py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0"
-                >
+                <Link to="/" className="block text-md py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/resonance"
-                  className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0"
-                >
+                <Link to="/resonance" className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0">
                   Resonance
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/melody"
-                  className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0"
-                >
+                <Link to="/melody" className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0">
                   Melody
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/aboutus"
-                  className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0"
-                >
+                <Link to="/aboutus" className="block py-2 px-3 font-bhadra text-burgundy rounded md:hover:bg-transparent md:border-0 md:hover:text-taupe md:p-0">
                   About Us
                 </Link>
               </li>
               <li>
                 <div className="relative">
                   {!isSignedIn ? (
-                    <button
-                      className="text-sm font-bhadra text-ivory bg-burgundy rounded-md hover:border-2 hover:border-burgundy hover:text-burgundy hover:bg-ivory w-16 h-8 mb-5"
-                      onClick={() => setShowSignIn(true)}
-                    >
-                      Sign In
-                    </button>
+                    <Link to="/signin">
+                      <button
+                        className="max-sm:ms-2 max-sm:mt-2 text-sm font-bhadra text-ivory bg-burgundy rounded-md hover:border-2 hover:border-burgundy hover:text-burgundy hover:bg-ivory w-16 h-7 mb-5"
+                        onClick={handleSignInClick}
+                      >
+                        Sign In
+                      </button>
+                    </Link>
                   ) : (
                     <div className="relative">
                       <button
-                        className="text-sm text-burgundy rounded-md hover:border-2 hover:text-burgundy w-28 h-8 mb-5"
+                        className="text-md font-bhadra text-burgundy rounded-md w-30 h-3 lg:mb-7 mb-2 max-sm:ms-3 max-sm:mt-2"
                         onClick={() => setShowDropdown(!showDropdown)}
                       >
                         Welcome, {username}
                       </button>
                       {showDropdown && (
-                        <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
-                          <Link
-                            to="/favorites"
-                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            Favorites
-                          </Link>
+                        <div className="absolute right-3 mt-2 w-50 bg-ivory border-burgundy border-[3px] rounded-md shadow-lg">
                           <button
-                            className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            className="block w-full text-left px-4 py-2 text-sm text-burgundy"
                             onClick={handleLogout}
                           >
                             Log out
@@ -141,13 +115,6 @@ const Navbar = () => {
                 </div>
               </li>
             </ul>
-            <SignIn 
-                isVisible={showSignIn} 
-                onClose={() => setShowSignIn(false)}
-                onSignIn={handleSignIn}
-              >
-              </SignIn>
-            
           </div>
         </div>
       </nav>

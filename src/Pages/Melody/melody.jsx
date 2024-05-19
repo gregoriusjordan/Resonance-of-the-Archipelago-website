@@ -6,7 +6,6 @@ import Navbar from "../../Components/Navbar/Navbar";
 
 const Melody = () => (
   <div>
-    <Navbar />
     <Outlet />
   </div>
 );

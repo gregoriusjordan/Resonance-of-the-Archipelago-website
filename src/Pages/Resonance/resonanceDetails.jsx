@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import alatMusikData from "../../Data/alatMusik";
 import AlatMusikDetails from "../../Components/AlatMusik/AlatMusikDetail";
 import AlatMusik from "../../Components/AlatMusik/AlatMusik";
+import Footer from "../../Components/Footer/Footer";
+
 
 const ResonanceDetails = () => {
   const { index } = useParams();
@@ -12,6 +14,7 @@ const ResonanceDetails = () => {
   
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    
   }, []);
   
 
@@ -26,7 +29,7 @@ const ResonanceDetails = () => {
 
   return (
     <div data-aos="fade-up">
-      <div className="mt-[150px] mb-14 max-sm:mx-4">
+        <div className="mt-[150px] mb-14 mx-2 max-md:mx-4 max-sm:mx-4">
         {selectedAlatMusik ? (
           <AlatMusikDetails
             alatMusik={selectedAlatMusik}
@@ -42,7 +45,7 @@ const ResonanceDetails = () => {
         <h1 className="font-raja text-ivory lg:text-[60px] text-[45px]">Other Resonances</h1>
       </div>
       <div className="mt-8">
-      <div className="grid lg:grid-cols-3 grid-cols-2 lg:gap-5 gap-2 lg:mx-14 mx-2">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-5 gap-2 lg:mx-14 mx-2">
         {randomAlatMusik.map((alatMusik, i) => (
           <div
             key={i}
@@ -56,6 +59,9 @@ const ResonanceDetails = () => {
           </div>
         ))}
       </div>
+      </div>
+      <div className="mt-4">
+        <Footer/>
       </div>
     </div>
   );

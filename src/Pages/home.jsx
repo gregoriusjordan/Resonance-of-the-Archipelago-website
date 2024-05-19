@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import "../App.css";
 import Carousel from "../Components/Carousel/Carousel";
@@ -9,8 +9,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Shelf from "../Components/Shelf/Shelf";
 import FooterHome from "../Components/Footer/FooterHome";
-import Dyk from "../Components/DYK/Dyk";
 import alatMusik from "../Data/alatMusik";
+import Weather from "../Components/Weather";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -43,13 +43,12 @@ const Home = () => {
   }, []);
 
   const handleClick = (index) => {
-    const actualIndex = index + 6; // Adjusting the index to match the original array
+    const actualIndex = index + 6; 
     navigate(`/resonance/detail/${actualIndex}`);
   };
 
   return (
     <div className="container-lg md:mx-auto bg-burgundys scrollbar scrollbar-thumb-taupe scrollbar-track-burgundy">
-      <Navbar />
       <br />
       <br />
       <br />
@@ -78,7 +77,7 @@ const Home = () => {
         data-aos-once="true"
       >
         <Carousel />
-      </div>
+      </div>  
 
       <div
         data-aos="fade-up"
@@ -94,11 +93,18 @@ const Home = () => {
               Find Your Melody!
             </h1>
             <h2 className="font-quick text-3xl text-burgundy font-normal max-sm:text-xl">
-              Click on one of the island.
+              Click on the island.
             </h2>
-            <Map />
+            <Link to="/melody">
+              <Map />
+            </Link>
           </div>
-          <div className="mt-28 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:mx-8" data-aos="fade-down" data-aos-once="true" data-aos-duration="1000">
+          <div
+            className="mt-28 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:mx-8"
+            data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000"
+          >
             {alatMusikArr.slice(6, 10).map((alatMusik, index) => (
               <div key={index} onClick={() => handleClick(index)}>
                 <Shelf
@@ -109,9 +115,27 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <div>
-            <Dyk />
+          <div className="mt-16" data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000">
+            <Weather />
           </div>
+          <div data-aos="fade-up"
+            data-aos-once="true"
+            data-aos-duration="1000">
+          <h1 className="mt-14 font-raja lg:text-5xl text-2xl text-burgundy text-center">Let's listen to the melody!</h1>
+          <div className="mt-2 flex justify-center mx-6" >
+            <iframe
+              src="https://open.spotify.com/embed/playlist/3yuaVzvV2Am3HD202qzRRI"
+              className="lg:w-[650px] md:w-[500px] w-[300px]"
+              height="400"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title="Spotify Playlist"
+            ></iframe>
+          </div>
+          </div>
+      
           <div className="mt-16">
             <FooterHome />
           </div>
@@ -119,6 +143,6 @@ const Home = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
