@@ -6,13 +6,13 @@ Resonance of The Archipelago is a website that takes the theme of Indonesian tra
 
 This website originates as a project for a final test for Intro to Internet Technology course in Universitas Multimedia Nusantara.
 
-Homepage
+# Homepage
 ![image](https://github.com/gregoriusjordan/Resonance-of-the-Archipelago-website/assets/81107981/0d651279-1b99-4d15-8489-03b0ecd0fbdf)
 
-Resonance
+# Resonance
 ![image](https://github.com/gregoriusjordan/Resonance-of-the-Archipelago-website/assets/81107981/a251955a-0aee-4692-87d1-ebc2aa22df35)
 
-Melody
+# Melody
 ![image](https://github.com/gregoriusjordan/Resonance-of-the-Archipelago-website/assets/81107981/5616b5d4-4b38-4a17-a5b9-e375482eae08)
 
 
